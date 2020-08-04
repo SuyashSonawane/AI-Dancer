@@ -6,6 +6,9 @@
 
 A Long Short Term Memory Neural Network and Style GAN based Dancer that can generate new dance steps.
 
+Explanation
+[video](https://www.youtube.com/watch?v=kDGQDVmToVI)
+
 ## Final GAN Output
 
 ![Final GAN Output](assets/1.gif)
