@@ -1,7 +1,7 @@
 # AI Dancer
 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/SuyashSonawane/AI-Dancer)
-[![TF](https://img.shields.io/badge/Tensorflow-2.0+-green.svg)](https://github.com/SuyashSonawane/AI-Dancer)
+[![TF](https://img.shields.io/badge/Tensorflow-2.1+-green.svg)](https://github.com/SuyashSonawane/AI-Dancer)
 [![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)](https://github.com/SuyashSonawane/AI-Dancer)
 
 A Long Short Term Memory Neural Network and Style GAN based Dancer that can generate new dance steps.
@@ -17,22 +17,43 @@ Explanation
 
 ![Final GAN Output](assets/2.gif)
 
+## Table of Contents
+
+- [AI Dancer](#ai-dancer)
+  - [Final GAN Output](#final-gan-output)
+  - [Intermediate LSTM Output](#intermediate-lstm-output)
+  - [Table of Contents](#table-of-contents)
+  - [Getting Started](#getting-started)
+- [Dancer with LSTM](#dancer-with-lstm)
+  - [Data Format](#data-format)
+  - [Adding Training Data](#adding-training-data)
+  - [Generating new Dance Moves](#generating-new-dance-moves)
+- [Generating new Images with GAN](#generating-new-images-with-gan)
+  - [Data Format](#data-format-1)
+  - [Training GAN](#training-gan)
+  - [Generating Images](#generating-images)
+  - [Generating Video](#generating-video)
+- [Extras](#extras)
+  - [Future Improvements](#future-improvements)
+  - [Contributing](#contributing)
+  - [Author](#author)
+  - [License](#license)
+  - [Acknowledgments](#acknowledgments)
+
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
+These instructions will get you a copy of the project up and running on your local machine for development.
 
 What things you need to install the software and how to install them
 
 ```
-tensorflow==2.0.0
+tensorflow==2.1.0
 numpy==1.18.4
 pandas==1.0.3
 joblib==0.16.0
 ```
 
-# Training
+# Dancer with LSTM
 
 A step by step series of examples that tell you how to get a trained model
 
@@ -86,9 +107,59 @@ check [generate.py](generate.py)
 
 New csv file will be generated `new_moves.csv` with rows containing position points
 
-# Futher steps for GAN setup are to be added
+# Generating new Images with GAN
 
-Be sure to star and watch this repo to get notifications about changes and updates
+## Data Format
+
+In the next steps I made a visualizer in `P5.js` to display the csv data in the form of stick figure, then I saved those images as target images for the GAN, the samples are shared in `target/` directory.
+
+SAMPLE
+
+![SAMPLE](target\38.jpg)
+
+In the `images/` directory there are images which contain the stick figure as well as the real image which was used to generate the training data
+
+SAMPLE
+
+![SAMPLE](images\38.jpg)
+
+## Training GAN
+
+Copy your training images in the `images/` folder, and run the command
+
+```
+!# 10 epochs
+> python gan_train.py
+```
+
+the checkpoints will be saved in the `training_checkpoints/` directory after every 5 epochs
+
+## Generating Images
+
+Copy your target images in the `target/` folder, and run the command
+
+```
+> python gan_generate.py
+```
+
+the images will be generated and saved in `new_images/` directory.
+
+## Generating Video
+
+Now we have our new images generated in `new_images/` directory we can convert them into a video using ffmpeg
+
+```
+> ffmpeg -r 1/5 -i new_images/fig%d.jpg -c:v libx264 -vf  "fps=25 ,pad=ceil(iw/2)*2:ceil(ih/2)*2"  -pix_fmt yuv420p out.mp4
+```
+
+this will create `out.mp4` file with the images as a video file.
+
+# Extras
+
+## Future Improvements
+
+1. Improve the GAN and the Neural Network to generate more realistic images
+2. Deploying project to Web, to generate new moves on the go.
 
 ## Contributing
 
@@ -96,7 +167,9 @@ This is a opensource project, if you want to contribute feel free to create a pu
 
 ## Author
 
-**Suyash Sonawane** - [Github](https://github.com/suyashsonawane)
+**Suyash Sonawane** - [Github](https://github.com/suyashsonawane) | [LinkedIn](https://www.linkedin.com/in/suyash-sonawane-44661417b/)
+
+For any feedback and suggestions mail me at [Suyash Sonawane](mailto:suyashsonawane005@gmail.com)
 
 ## License
 
