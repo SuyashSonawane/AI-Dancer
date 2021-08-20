@@ -12,7 +12,7 @@
  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
 </p>
 
-<a href="https://opensource.org/licenses/MIT"> <h4 align="center">
+<a href="https://devlibrary.withgoogle.com/products/ml/repos/SuyashSonawane-AI-Dancer"> <h4 align="center">
 <img src="assets/google-dev-logo.png" width="60"> <br />
 Featured on Google Developer Library 
 </h4> </a>
