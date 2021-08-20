@@ -1,29 +1,31 @@
-# AI Dancer
+<h1 align="center">
+  Artificial Intelligent Dancer
+  <br> <br>
+   <img src="assets/1.gif" />
+  <br>
+</h1>
 
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/SuyashSonawane/AI-Dancer)
-[![TF](https://img.shields.io/badge/Tensorflow-2.1+-green.svg)](https://github.com/SuyashSonawane/AI-Dancer)
-[![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)](https://github.com/SuyashSonawane/AI-Dancer)
+<p align="center">  
+	<img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg">
+    <img src="https://img.shields.io/badge/Tensorflow-2.1+-green.svg">
+    <img src="https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github">
+ <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
+</p>
 
-A Long Short Term Memory Neural Network and Style GAN based Dancer that can generate new dance steps.
+<a href="https://opensource.org/licenses/MIT"> <h4 align="center">
+<img src="assets/google-dev-logo.png" width="60"> <br />
+Featured on Google Developer Library 
+</h4> </a>
 
-Explanation
-[video](https://www.youtube.com/watch?v=kDGQDVmToVI)
-
-## Final GAN Output
-
-![Final GAN Output](assets/1.gif)
-
-## Intermediate LSTM Output
-
-![Final GAN Output](assets/2.gif)
+<p align="center">
+A Long Short Term Memory Neural Network and Style GAN based Dancer that can generate new dance steps. A short summary of the project: Neural Network 🧠 sees 👀 dancing videos 💃, tries to learn and create its own dance steps 🕺
+</p>
 
 ## Table of Contents
 
-- [AI Dancer](#ai-dancer)
-  - [Final GAN Output](#final-gan-output)
-  - [Intermediate LSTM Output](#intermediate-lstm-output)
-  - [Table of Contents](#table-of-contents)
-  - [Getting Started](#getting-started)
+
+- [Table of Contents](#table-of-contents)
+- [Getting Started](#getting-started)
 - [Dancer with LSTM](#dancer-with-lstm)
   - [Data Format](#data-format)
   - [Adding Training Data](#adding-training-data)
@@ -39,6 +41,13 @@ Explanation
   - [Author](#author)
   - [License](#license)
   - [Acknowledgments](#acknowledgments)
+
+# Explanation
+<p align="center"> 
+   <a href="https://www.youtube.com/watch?v=kDGQDVmToVI"><img src="https://img.youtube.com/vi/kDGQDVmToVI/0.jpg"></a> <br/>
+</p>
+
+
 
 ## Getting Started
 
@@ -94,6 +103,10 @@ check [train.py](train.py)
 ```
 > python train.py
 ```
+
+## Intermediate LSTM Output
+
+![Final GAN Output](assets/2.gif)
 
 ## Generating new Dance Moves
 
