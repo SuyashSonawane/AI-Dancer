@@ -1,5 +1,5 @@
 <h1 align="center">
-  Artificial Intelligent Dancer
+  AI Dancer
   <br> <br>
    <img src="assets/1.gif" />
   <br>
